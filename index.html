@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vibration API Test</title>
+</head>
+<body>
+    <button id="vibrateButton">Нажми меня</button>
+    <script>
+        document.getElementById("vibrateButton").addEventListener("click", function() {
+            if ("vibrate" in navigator) {
+                // Вибрация продолжительностью 200 мс
+                navigator.vibrate(200);
+            } else {
+                alert("Vibration API не поддерживается вашим браузером.");
+            }
+        });
+    </script>
+</body>
+</html>
